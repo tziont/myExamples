@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 
 export class HttpRequestService {
    constructor(private http: HttpClient) { }
-   
+
   // getting the json moc
   getData() {
    return  this.http.get<IFruet[]>('/assets/moc.json');

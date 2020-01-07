@@ -1,9 +1,9 @@
 [
   { "name": "banana", "color": "Yellow" },
-  { "name": "Lemon", "color": "green" },
+  { "name": "Lemon", "color": "Green" },
   { "name": "Mango", "color": "Orange" },
   { "name": "tomatto", "color": "Red" },
-  { "name": "olive", "color": "green" },
+  { "name": "olive", "color": "Green" },
   { "name": "Orange", "color": "Orange" },
   { "name": "watermellon", "color": "Yellow" }
 ]
