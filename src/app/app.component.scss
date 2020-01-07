@@ -1,0 +1,16 @@
+.main-container{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.toolbar{
+    border-bottom:2px solid #333;
+    padding-bottom: 5px;
+    span{
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+}
+.nav-item{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px; 
+}

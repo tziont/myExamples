@@ -1,0 +1,11 @@
+<h2>Getting data from moc API</h2>
+<h3>Getting the data via Observable and the | async pipe</h3>
+<button (click)="getData()">Get data</button>
+<button (click)="getGreen()">Get Green</button>
+
+<ul>
+    <li *ngFor='let item of myData$ | async'>
+        <p>Name: {{item.name}} Color: {{item.color}}</p>
+    </li>
+</ul>
+
