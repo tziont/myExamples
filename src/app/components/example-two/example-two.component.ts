@@ -10,7 +10,6 @@ export class ExampleTwoComponent {
   public res = '';
 
   ///////////////////// CallBack ////////////////////////////
-
   useCallBack(userId, CallBack) {
     setTimeout(() => {
       const fackeData = {
@@ -18,14 +17,14 @@ export class ExampleTwoComponent {
         name: 'Tzion'
       };
       CallBack(fackeData);
-    }, 1000);
+    }, 500);
   }
   cb = data => {
     this.res =
       'This is the data using callBack: ' +
       'ID: ' +
       data.id +
-      'name: ' +
+      ' name: ' +
       data.name;
   }
 
@@ -42,17 +41,26 @@ export class ExampleTwoComponent {
           name: 'Tzion'
         };
         resolve(fackeData);
-      }, 1000);
+      }, 500);
     });
   }
   usePromise(id) {
     this.fetchData(id)
     .then(user => {
-      this.res = 'This is the data using promis: ' + 'ID: ' + user.id + ' name: ' + user.name ;
+      this.res = 'This is the data using promise: ' + 'ID: ' + user.id + ' name: ' + user.name ;
     })
     .catch(err => {
-      console.log(err);
+      this.res = err;
     });
   }
-    ////////////////////////// Async //////////////////////////
+    //////////////////// Async /////////////////////
+    async useAsync(userId) {
+      try {
+        const user = await this.fetchData(userId);
+        this.res = 'This is the data using promise: ' + 'ID: ' + user.id + ' name: ' + user.name ;
+      } catch
+        (err) {
+          this.res = err;
+      }
+    }
 }

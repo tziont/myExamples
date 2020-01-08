@@ -1,16 +1,40 @@
 .main-container{
     font-family: Arial, Helvetica, sans-serif;
 }
+.title{
+    float: left;
+    color:rgb(139, 40, 40)
+}
+ul{
+    float: left;
+    list-style: none;
+    margin:0;
+}
 .toolbar{
     border-bottom:2px solid #333;
     padding-bottom: 5px;
+    line-height: 24px;
     span{
         font-size: 1.5em;
         font-weight: 600;
     }
+    &:after{
+        content:'';
+        display: block;
+        clear: both;
+    }
 }
 .nav-item{
-    text-decoration: none;
-    display: inline-block;
-    margin: 0 10px; 
+    
+    float: left;
+    border-right:1px solid #333;
+    padding: 0 10px; 
+    
+    &:last-child{
+        border: none;
+    }
+    a{
+        text-decoration: none;
+        color:#333;
+    }
 }
